@@ -11,8 +11,9 @@ module Types
     field :blog, BlogType,
     def blog
       # binding.irb
-      Blog.last
-      # content[:blog]
+      # Blog.last
+      # context[:blog]
+      blog[:context]
     end
   end
 end
