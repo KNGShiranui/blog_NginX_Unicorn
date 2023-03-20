@@ -35,5 +35,5 @@
 yarn-debug.log*
 .yarn-integrity
 
-#dotenv-rails(追記分)
+#dotenv-rails
 .env
