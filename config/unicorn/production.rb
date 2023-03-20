@@ -1,7 +1,7 @@
 $worker  = 2
 $timeout = 30
 #自分のアプリケーション名（currentがつくことに注意）
-$app_dir = "/var/www/アプリケーション名/current"
+$app_dir = "/var/www/blog_NginX_Unicorn/current"
 $listen  = File.expand_path 'tmp/sockets/unicorn.sock', $app_dir
 $pid     = File.expand_path 'tmp/pids/unicorn.pid', $app_dir
 $std_log = File.expand_path 'log/unicorn.log', $app_dir
@@ -18,7 +18,7 @@ pid $pid
 preload_app true
 
 before_fork do |server, worker|
-  defined?(ActiveRecord::Base) and ActiveRecord::Base.connection.disconnect!
+  defined?(ActiveRUecord::Base) and ActiveRecord::Base.connection.disconnect!
   old_pid = "#{server.config[:pid]}.oldbin"
   if old_pid != server.pid
     begin
