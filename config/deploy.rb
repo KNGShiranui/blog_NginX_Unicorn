@@ -12,7 +12,7 @@ set :repo_url, 'https://github.com/KNGShiranui/blog_NginX_Unicorn'
 set :branch, ENV['BRANCH'] || 'master'
 
 # deploy先のディレクトリ。
-set :deploy_to, '/var/www/blog_NginX_Unicorn'
+set :deploy_to, '/var/www/achieve'
 
 # シンボリックリンクをはるフォルダ・ファイル
 set :linked_files, %w{.env config/secrets.yml}
